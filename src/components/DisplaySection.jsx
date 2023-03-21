@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DisplaySection() {
+function DisplaySection({triggerPreview}) {
 
     const goTop =() => () => {
         window.scrollTo({
@@ -18,7 +18,7 @@ function DisplaySection() {
             <span className="description">
                 显示屏在阳光下亮度最高可达 2 倍
             </span>
-            <button className="button">试试我！</button>
+            <button className="button" onClick={triggerPreview}>试试我！</button>
             <button className="back-button" onClick={goTop()}>回到顶部</button>
         </div>
     )
